@@ -1,38 +1,146 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.catalog {
+  padding: 16px;
+}
+
+nav {
+  background-color: #007bff; /* Color de fondo del menú */
+}
+
+.nav-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #0056b3; /* Color del botón al pasar el ratón */
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #007bff; /* Mismo color que el menú */
+  color: white; /* Color del texto en el footer */
+  padding: 20px; /* Espaciado interno del footer */
+  text-align: center; /* Centrar el texto en el footer */
+}
+
+/* Ajustes para las tarjetas de producto */
+.product-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin: 8px; /* Márgenes reducidos para acomodar mejor en la cuadrícula */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-card:hover {
+  transform: scale(1.05);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Ajuste para las imágenes de producto */
+.product-image {
+  width: 100%;
+  max-width: 200px; /* Establecer un ancho máximo para todas las imágenes */
+  height: auto;
+  border-radius: 8px; /* Borde redondeado para la imagen */
+  margin: 0 auto; /* Centrar la imagen dentro de la tarjeta */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-name {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.product-price {
+  color: green;
+  font-weight: bold;
+}
+
+/* Estilos para el popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  text-align: center; /* Centrar el texto del popup */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Estilos para la cuadrícula */
+.grid {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en la cuadrícula */
+  justify-content: flex-start; /* Alinear a la izquierda */
+}
+
+/* Ajuste para las tarjetas de producto en filas de 4 */
+.product-card {
+  flex: 0 0 calc(24% - 16px); /* Ajustar el ancho para que quepan 4 en la fila (con márgenes) */
+  margin: 8px; /* Márgenes reducidos */
+}
+
+/* Estilos para el botón de venta */
+.button-sale {
+  background-color: #007bff; /* Color del botón de venta */
   color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px; /* Espacio encima del botón */
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.button-sale:hover {
+  background-color: #0056b3; /* Color del botón de venta al pasar el ratón */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos para el botón del popup */
+.button-popup {
+  background-color: #dc3545; /* Color del botón en el popup (rojo) */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px; /* Espacio encima del botón */
+  transition: background-color 0.3s;
+}
+
+.button-popup:hover {
+  background-color: #c82333; /* Color del botón del popup al pasar el ratón */
 }
